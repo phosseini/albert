@@ -137,13 +137,13 @@ class CausalProcessor(DataProcessor):
     def get_dev_examples(self, data_dir):
         """See base class."""
         return self._create_examples(
-            self._read_tsv(os.path.join(data_dir, "CREST", "dev_matched.tsv"), quotechar='"'),
+            self._read_tsv(os.path.join(data_dir, "CREST", "dev.tsv"), quotechar='"'),
             "dev_matched")
 
     def get_test_examples(self, data_dir):
         """See base class."""
         return self._create_examples(
-            self._read_tsv(os.path.join(data_dir, "CREST", "test_matched.tsv"), quotechar='"'),
+            self._read_tsv(os.path.join(data_dir, "CREST", "test.tsv"), quotechar='"'),
             "test")
 
     def get_labels(self):
